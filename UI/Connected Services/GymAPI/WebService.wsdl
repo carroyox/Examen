@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="dataGrid_Data">
+        <s:complexType />
+      </s:element>
+      <s:element name="dataGrid_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataGrid_DataResult" type="tns:ArrayOfTbl_DensidadCorporal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTbl_DensidadCorporal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Tbl_DensidadCorporal" nillable="true" type="tns:Tbl_DensidadCorporal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Tbl_DensidadCorporal">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id_Paciente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre_Paciente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Peso" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Talla" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Genero" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Edad" type="s:unsignedByte" />
+          <s:element minOccurs="1" maxOccurs="1" name="Triceps" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Biceps" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pecho" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Axila" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Subescapular" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Suprailíaco" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Abdomen" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Muslo" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Pantorrilla" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fecha_Medicion" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado_YUHASZ" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado_JacksonPollock" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="dataGrid_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:dataGrid_Data" />
+  </wsdl:message>
+  <wsdl:message name="dataGrid_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:dataGrid_DataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="dataGrid_Data">
+      <wsdl:input message="tns:dataGrid_DataSoapIn" />
+      <wsdl:output message="tns:dataGrid_DataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dataGrid_Data">
+      <soap:operation soapAction="http://tempuri.org/dataGrid_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dataGrid_Data">
+      <soap12:operation soapAction="http://tempuri.org/dataGrid_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:61924/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:61924/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

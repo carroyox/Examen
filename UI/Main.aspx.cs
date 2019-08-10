@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WcfService1;
 
 namespace UI
 {
@@ -11,6 +12,10 @@ namespace UI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            WcfService1.WebService API = new WcfService1.WebService();
+
+            API.dataGrid_Data();
+             
 
         }
     }

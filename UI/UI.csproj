@@ -78,7 +78,10 @@
     <Content Include="Connected Services\GymAPI\UI.GymAPI.dataGrid_DataResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GymAPI\UI.GymAPI.Tbl_DensidadCorporal.datasource">
+    <Content Include="Connected Services\GymAPI\UI.GymAPI.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GymAPI\UI.GymAPI.SaveResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\GymAPI\WebService.disco" />
@@ -88,8 +91,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Main.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="CSS\Estilos.css" />
+    <Content Include="Data.aspx" />
+    <Content Include="Form.aspx" />
+    <Content Include="Images\gim.jpg" />
+    <Content Include="Images\n1.jpg" />
+    <Content Include="Images\nutri.jpg" />
+    <Content Include="Principal.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connected Services\GymAPI\Reference.cs">
@@ -97,25 +108,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Data.aspx.cs">
+      <DependentUpon>Data.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Data.aspx.designer.cs">
+      <DependentUpon>Data.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPager.Master.cs">
-      <DependentUpon>MasterPager.Master</DependentUpon>
+    <Compile Include="ExamenMaster.Master.cs">
+      <DependentUpon>ExamenMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MasterPager.Master.designer.cs">
-      <DependentUpon>MasterPager.Master</DependentUpon>
+    <Compile Include="ExamenMaster.Master.designer.cs">
+      <DependentUpon>ExamenMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MasterPager.Master" />
     <None Include="Connected Services\GymAPI\WebService.wsdl" />
+    <Content Include="ExamenMaster.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

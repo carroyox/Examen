@@ -18,7 +18,7 @@ namespace DAL
         public string Nombre_Paciente { get; set; }
         public double Peso { get; set; }
         public double Talla { get; set; }
-        public double Genero { get; set; }
+        public string Genero { get; set; }
         public byte Edad { get; set; }
         public double Triceps { get; set; }
         public double Biceps { get; set; }

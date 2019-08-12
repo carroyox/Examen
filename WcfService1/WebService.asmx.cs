@@ -21,11 +21,18 @@ namespace WcfService1
     {
 
         [WebMethod]
-        public List<Tbl_DensidadCorporal> dataGrid_Data()
+        public List<string[]> dataGrid_Data()
         {
             Reference BL = new Reference();
-            
+
             return BL.datos();
+        }
+
+        [WebMethod]
+        public void Save(string nombre, float[] medidas, int edad, char genero, DateTime fecha) {
+            Reference BL = new Reference();
+            BL.Save(nombre, medidas, edad, genero, fecha);
+
         }
     }
 }

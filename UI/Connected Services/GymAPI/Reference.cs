@@ -15,302 +15,16 @@ namespace UI.GymAPI {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Tbl_DensidadCorporal", Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="http://tempuri.org/", ItemName="string")]
     [System.SerializableAttribute()]
-    public partial class Tbl_DensidadCorporal : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int Id_PacienteField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Nombre_PacienteField;
-        
-        private double PesoField;
-        
-        private double TallaField;
-        
-        private double GeneroField;
-        
-        private byte EdadField;
-        
-        private double TricepsField;
-        
-        private double BicepsField;
-        
-        private double PechoField;
-        
-        private double AxilaField;
-        
-        private double SubescapularField;
-        
-        private double SuprailíacoField;
-        
-        private double AbdomenField;
-        
-        private double MusloField;
-        
-        private double PantorrillaField;
-        
-        private System.DateTime Fecha_MedicionField;
-        
-        private double Resultado_YUHASZField;
-        
-        private double Resultado_JacksonPollockField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id_Paciente {
-            get {
-                return this.Id_PacienteField;
-            }
-            set {
-                if ((this.Id_PacienteField.Equals(value) != true)) {
-                    this.Id_PacienteField = value;
-                    this.RaisePropertyChanged("Id_Paciente");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Nombre_Paciente {
-            get {
-                return this.Nombre_PacienteField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Nombre_PacienteField, value) != true)) {
-                    this.Nombre_PacienteField = value;
-                    this.RaisePropertyChanged("Nombre_Paciente");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public double Peso {
-            get {
-                return this.PesoField;
-            }
-            set {
-                if ((this.PesoField.Equals(value) != true)) {
-                    this.PesoField = value;
-                    this.RaisePropertyChanged("Peso");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public double Talla {
-            get {
-                return this.TallaField;
-            }
-            set {
-                if ((this.TallaField.Equals(value) != true)) {
-                    this.TallaField = value;
-                    this.RaisePropertyChanged("Talla");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public double Genero {
-            get {
-                return this.GeneroField;
-            }
-            set {
-                if ((this.GeneroField.Equals(value) != true)) {
-                    this.GeneroField = value;
-                    this.RaisePropertyChanged("Genero");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public byte Edad {
-            get {
-                return this.EdadField;
-            }
-            set {
-                if ((this.EdadField.Equals(value) != true)) {
-                    this.EdadField = value;
-                    this.RaisePropertyChanged("Edad");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
-        public double Triceps {
-            get {
-                return this.TricepsField;
-            }
-            set {
-                if ((this.TricepsField.Equals(value) != true)) {
-                    this.TricepsField = value;
-                    this.RaisePropertyChanged("Triceps");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public double Biceps {
-            get {
-                return this.BicepsField;
-            }
-            set {
-                if ((this.BicepsField.Equals(value) != true)) {
-                    this.BicepsField = value;
-                    this.RaisePropertyChanged("Biceps");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
-        public double Pecho {
-            get {
-                return this.PechoField;
-            }
-            set {
-                if ((this.PechoField.Equals(value) != true)) {
-                    this.PechoField = value;
-                    this.RaisePropertyChanged("Pecho");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
-        public double Axila {
-            get {
-                return this.AxilaField;
-            }
-            set {
-                if ((this.AxilaField.Equals(value) != true)) {
-                    this.AxilaField = value;
-                    this.RaisePropertyChanged("Axila");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
-        public double Subescapular {
-            get {
-                return this.SubescapularField;
-            }
-            set {
-                if ((this.SubescapularField.Equals(value) != true)) {
-                    this.SubescapularField = value;
-                    this.RaisePropertyChanged("Subescapular");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
-        public double Suprailíaco {
-            get {
-                return this.SuprailíacoField;
-            }
-            set {
-                if ((this.SuprailíacoField.Equals(value) != true)) {
-                    this.SuprailíacoField = value;
-                    this.RaisePropertyChanged("Suprailíaco");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=12)]
-        public double Abdomen {
-            get {
-                return this.AbdomenField;
-            }
-            set {
-                if ((this.AbdomenField.Equals(value) != true)) {
-                    this.AbdomenField = value;
-                    this.RaisePropertyChanged("Abdomen");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=13)]
-        public double Muslo {
-            get {
-                return this.MusloField;
-            }
-            set {
-                if ((this.MusloField.Equals(value) != true)) {
-                    this.MusloField = value;
-                    this.RaisePropertyChanged("Muslo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=14)]
-        public double Pantorrilla {
-            get {
-                return this.PantorrillaField;
-            }
-            set {
-                if ((this.PantorrillaField.Equals(value) != true)) {
-                    this.PantorrillaField = value;
-                    this.RaisePropertyChanged("Pantorrilla");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=15)]
-        public System.DateTime Fecha_Medicion {
-            get {
-                return this.Fecha_MedicionField;
-            }
-            set {
-                if ((this.Fecha_MedicionField.Equals(value) != true)) {
-                    this.Fecha_MedicionField = value;
-                    this.RaisePropertyChanged("Fecha_Medicion");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=16)]
-        public double Resultado_YUHASZ {
-            get {
-                return this.Resultado_YUHASZField;
-            }
-            set {
-                if ((this.Resultado_YUHASZField.Equals(value) != true)) {
-                    this.Resultado_YUHASZField = value;
-                    this.RaisePropertyChanged("Resultado_YUHASZ");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=17)]
-        public double Resultado_JacksonPollock {
-            get {
-                return this.Resultado_JacksonPollockField;
-            }
-            set {
-                if ((this.Resultado_JacksonPollockField.Equals(value) != true)) {
-                    this.Resultado_JacksonPollockField = value;
-                    this.RaisePropertyChanged("Resultado_JacksonPollock");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+    public class ArrayOfString : System.Collections.Generic.List<string> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfFloat", Namespace="http://tempuri.org/", ItemName="float")]
+    [System.SerializableAttribute()]
+    public class ArrayOfFloat : System.Collections.Generic.List<float> {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -323,6 +37,13 @@ namespace UI.GymAPI {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/dataGrid_Data", ReplyAction="*")]
         System.Threading.Tasks.Task<UI.GymAPI.dataGrid_DataResponse> dataGrid_DataAsync(UI.GymAPI.dataGrid_DataRequest request);
+        
+        // CODEGEN: Generating message contract since element name nombre from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Save", ReplyAction="*")]
+        UI.GymAPI.SaveResponse Save(UI.GymAPI.SaveRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/Save", ReplyAction="*")]
+        System.Threading.Tasks.Task<UI.GymAPI.SaveResponse> SaveAsync(UI.GymAPI.SaveRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -376,13 +97,90 @@ namespace UI.GymAPI {
     public partial class dataGrid_DataResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public UI.GymAPI.Tbl_DensidadCorporal[] dataGrid_DataResult;
+        public UI.GymAPI.ArrayOfString[] dataGrid_DataResult;
         
         public dataGrid_DataResponseBody() {
         }
         
-        public dataGrid_DataResponseBody(UI.GymAPI.Tbl_DensidadCorporal[] dataGrid_DataResult) {
+        public dataGrid_DataResponseBody(UI.GymAPI.ArrayOfString[] dataGrid_DataResult) {
             this.dataGrid_DataResult = dataGrid_DataResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="Save", Namespace="http://tempuri.org/", Order=0)]
+        public UI.GymAPI.SaveRequestBody Body;
+        
+        public SaveRequest() {
+        }
+        
+        public SaveRequest(UI.GymAPI.SaveRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class SaveRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public UI.GymAPI.ArrayOfFloat medidas;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int edad;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public char genero;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public System.DateTime fecha;
+        
+        public SaveRequestBody() {
+        }
+        
+        public SaveRequestBody(string nombre, UI.GymAPI.ArrayOfFloat medidas, int edad, char genero, System.DateTime fecha) {
+            this.nombre = nombre;
+            this.medidas = medidas;
+            this.edad = edad;
+            this.genero = genero;
+            this.fecha = fecha;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class SaveResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="SaveResponse", Namespace="http://tempuri.org/", Order=0)]
+        public UI.GymAPI.SaveResponseBody Body;
+        
+        public SaveResponse() {
+        }
+        
+        public SaveResponse(UI.GymAPI.SaveResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class SaveResponseBody {
+        
+        public SaveResponseBody() {
         }
     }
     
@@ -418,7 +216,7 @@ namespace UI.GymAPI {
             return base.Channel.dataGrid_Data(request);
         }
         
-        public UI.GymAPI.Tbl_DensidadCorporal[] dataGrid_Data() {
+        public UI.GymAPI.ArrayOfString[] dataGrid_Data() {
             UI.GymAPI.dataGrid_DataRequest inValue = new UI.GymAPI.dataGrid_DataRequest();
             inValue.Body = new UI.GymAPI.dataGrid_DataRequestBody();
             UI.GymAPI.dataGrid_DataResponse retVal = ((UI.GymAPI.WebServiceSoap)(this)).dataGrid_Data(inValue);
@@ -434,6 +232,38 @@ namespace UI.GymAPI {
             UI.GymAPI.dataGrid_DataRequest inValue = new UI.GymAPI.dataGrid_DataRequest();
             inValue.Body = new UI.GymAPI.dataGrid_DataRequestBody();
             return ((UI.GymAPI.WebServiceSoap)(this)).dataGrid_DataAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        UI.GymAPI.SaveResponse UI.GymAPI.WebServiceSoap.Save(UI.GymAPI.SaveRequest request) {
+            return base.Channel.Save(request);
+        }
+        
+        public void Save(string nombre, UI.GymAPI.ArrayOfFloat medidas, int edad, char genero, System.DateTime fecha) {
+            UI.GymAPI.SaveRequest inValue = new UI.GymAPI.SaveRequest();
+            inValue.Body = new UI.GymAPI.SaveRequestBody();
+            inValue.Body.nombre = nombre;
+            inValue.Body.medidas = medidas;
+            inValue.Body.edad = edad;
+            inValue.Body.genero = genero;
+            inValue.Body.fecha = fecha;
+            UI.GymAPI.SaveResponse retVal = ((UI.GymAPI.WebServiceSoap)(this)).Save(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<UI.GymAPI.SaveResponse> UI.GymAPI.WebServiceSoap.SaveAsync(UI.GymAPI.SaveRequest request) {
+            return base.Channel.SaveAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<UI.GymAPI.SaveResponse> SaveAsync(string nombre, UI.GymAPI.ArrayOfFloat medidas, int edad, char genero, System.DateTime fecha) {
+            UI.GymAPI.SaveRequest inValue = new UI.GymAPI.SaveRequest();
+            inValue.Body = new UI.GymAPI.SaveRequestBody();
+            inValue.Body.nombre = nombre;
+            inValue.Body.medidas = medidas;
+            inValue.Body.edad = edad;
+            inValue.Body.genero = genero;
+            inValue.Body.fecha = fecha;
+            return ((UI.GymAPI.WebServiceSoap)(this)).SaveAsync(inValue);
         }
     }
 }

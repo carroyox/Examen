@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_ExamenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_ExamenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Tbl_DensidadCorporal">
           <Key>
             <PropertyRef Name="Id_Paciente" />
@@ -13,7 +13,7 @@
           <Property Name="Nombre_Paciente" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Peso" Type="float" Nullable="false" />
           <Property Name="Talla" Type="float" Nullable="false" />
-          <Property Name="Genero" Type="float" Nullable="false" />
+          <Property Name="Genero" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="Edad" Type="tinyint" Nullable="false" />
           <Property Name="Triceps" Type="float" Nullable="false" />
           <Property Name="Biceps" Type="float" Nullable="false" />
@@ -31,20 +31,22 @@
         <EntityContainer Name="DB_ExamenModelStoreContainer">
           <EntitySet Name="Tbl_DensidadCorporal" EntityType="Self.Tbl_DensidadCorporal" Schema="SCH_General" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_ExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_ExamenEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_DensidadCorporal" EntityType="DB_ExamenModel.Tbl_DensidadCorporal" />
+        </EntityContainer>
         <EntityType Name="Tbl_DensidadCorporal">
           <Key>
             <PropertyRef Name="Id_Paciente" />
           </Key>
           <Property Name="Id_Paciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nombre_Paciente" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nombre_Paciente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Peso" Type="Double" Nullable="false" />
           <Property Name="Talla" Type="Double" Nullable="false" />
-          <Property Name="Genero" Type="Double" Nullable="false" />
+          <Property Name="Genero" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="Edad" Type="Byte" Nullable="false" />
           <Property Name="Triceps" Type="Double" Nullable="false" />
           <Property Name="Biceps" Type="Double" Nullable="false" />
@@ -59,9 +61,6 @@
           <Property Name="Resultado_YUHASZ" Type="Double" Nullable="false" />
           <Property Name="Resultado_JacksonPollock" Type="Double" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="DB_ExamenEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Tbl_DensidadCorporal" EntityType="Self.Tbl_DensidadCorporal" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -71,24 +70,24 @@
           <EntitySetMapping Name="Tbl_DensidadCorporal">
             <EntityTypeMapping TypeName="DB_ExamenModel.Tbl_DensidadCorporal">
               <MappingFragment StoreEntitySet="Tbl_DensidadCorporal">
-                <ScalarProperty Name="Id_Paciente" ColumnName="Id_Paciente" />
-                <ScalarProperty Name="Nombre_Paciente" ColumnName="Nombre_Paciente" />
-                <ScalarProperty Name="Peso" ColumnName="Peso" />
-                <ScalarProperty Name="Talla" ColumnName="Talla" />
-                <ScalarProperty Name="Genero" ColumnName="Genero" />
-                <ScalarProperty Name="Edad" ColumnName="Edad" />
-                <ScalarProperty Name="Triceps" ColumnName="Triceps" />
-                <ScalarProperty Name="Biceps" ColumnName="Biceps" />
-                <ScalarProperty Name="Pecho" ColumnName="Pecho" />
-                <ScalarProperty Name="Axila" ColumnName="Axila" />
-                <ScalarProperty Name="Subescapular" ColumnName="Subescapular" />
-                <ScalarProperty Name="Suprailíaco" ColumnName="Suprailíaco" />
-                <ScalarProperty Name="Abdomen" ColumnName="Abdomen" />
-                <ScalarProperty Name="Muslo" ColumnName="Muslo" />
-                <ScalarProperty Name="Pantorrilla" ColumnName="Pantorrilla" />
-                <ScalarProperty Name="Fecha_Medicion" ColumnName="Fecha_Medicion" />
-                <ScalarProperty Name="Resultado_YUHASZ" ColumnName="Resultado_YUHASZ" />
                 <ScalarProperty Name="Resultado_JacksonPollock" ColumnName="Resultado_JacksonPollock" />
+                <ScalarProperty Name="Resultado_YUHASZ" ColumnName="Resultado_YUHASZ" />
+                <ScalarProperty Name="Fecha_Medicion" ColumnName="Fecha_Medicion" />
+                <ScalarProperty Name="Pantorrilla" ColumnName="Pantorrilla" />
+                <ScalarProperty Name="Muslo" ColumnName="Muslo" />
+                <ScalarProperty Name="Abdomen" ColumnName="Abdomen" />
+                <ScalarProperty Name="Suprailíaco" ColumnName="Suprailíaco" />
+                <ScalarProperty Name="Subescapular" ColumnName="Subescapular" />
+                <ScalarProperty Name="Axila" ColumnName="Axila" />
+                <ScalarProperty Name="Pecho" ColumnName="Pecho" />
+                <ScalarProperty Name="Biceps" ColumnName="Biceps" />
+                <ScalarProperty Name="Triceps" ColumnName="Triceps" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="Talla" ColumnName="Talla" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Nombre_Paciente" ColumnName="Nombre_Paciente" />
+                <ScalarProperty Name="Id_Paciente" ColumnName="Id_Paciente" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -106,7 +105,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

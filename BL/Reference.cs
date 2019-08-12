@@ -52,6 +52,7 @@ namespace BL
             {
                 var tupla = new Tbl_DensidadCorporal()
                 {
+                    
                     Nombre_Paciente = nombre,
                     Genero = genero.ToString(),
                     Edad = (byte)edad,
@@ -78,7 +79,7 @@ namespace BL
             }
         }
 
-        public double Yuhasz(float[] pliegues, char Gen)
+        private double Yuhasz(float[] pliegues, char Gen)
         {
             double Porcentaje_graso = 0;
             float SumPliegues = 0;
@@ -103,7 +104,7 @@ namespace BL
             return Porcentaje_graso;
         }
 
-        public double Jackson_Pollock(float[] pliegues, char Gen, int edad)
+        private double Jackson_Pollock(float[] pliegues, char Gen, int edad)
         {
             double Densidad_Corporal = 0;
             float SumPliegues = 0;

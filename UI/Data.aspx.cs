@@ -21,7 +21,7 @@ namespace UI
 
                 List<String[]> datos = API.dataGrid_Data();
 
-
+                
                 DGPersonas.DataSource = datos.Select(arr => new
                 {
                     Fecha_Medicion = arr[14],

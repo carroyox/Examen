@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using UI.GymAPI;
+
 
 namespace UI
 {
@@ -14,14 +16,10 @@ namespace UI
             if (!IsPostBack)
             {
 
-                // GymAPI.WebServiceSoapClient API = new GymAPI.WebServiceSoapClient();
+                GymAPI.WebServiceSoapClient API = new GymAPI.WebServiceSoapClient();
+                ArrayOfString[] datos = API.dataGrid_Data();
 
 
-                WcfService1.WebService API = new WcfService1.WebService();
-
-                List<String[]> datos = API.dataGrid_Data();
-
-                
                 DGPersonas.DataSource = datos.Select(arr => new
                 {
                     Fecha_Medicion = arr[14],
@@ -29,7 +27,7 @@ namespace UI
                     Genero = arr[1],
                     Edad = arr[2],
                     Peso = arr[3],
-                    Talla = arr[4],
+                    Estatura = arr[4],
                     Triceps = arr[5],
                     Biceps = arr[6],
                     Pecho = arr[7],

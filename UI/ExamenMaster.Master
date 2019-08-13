@@ -6,15 +6,36 @@
 <head runat="server">
     <title>Medicion de Pliegues</title>
     <link href="CSS/Estilos.css" rel="stylesheet" />
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+        <header>
+            <nav class="menu-bar">
+                <ul>
+                    <li>
+                        <a href="Principal.aspx">Principal</a>
+                    </li>
+                    <li>
+                        <a href="Data.aspx">Ver Usuarios</a>
+                    </li>
+                    <li>
+                        <a href="Form.aspx">Datos y Medidas</a>
+                    </li>
+                </ul>
+            </nav>
+            <br>
+        </header>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
     </form>
 </body>
 </html>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using UI.GymAPI;
 
 namespace UI
 {
@@ -34,8 +34,6 @@ namespace UI
         }
         protected void Submit_Click(object sender, EventArgs e)
         {
-
-
             float Peso = (float)Convert.ToDouble(TbPeso.Text);
             float Talla = (float)Convert.ToDouble(TbTalla.Text);
             float Triceps = (float)Convert.ToDouble(TbTriceps.Text);
@@ -47,19 +45,10 @@ namespace UI
             float Abdomen = (float)Convert.ToDouble(TbAbdomen.Text);
             float Muslo = (float)Convert.ToDouble(TbMuslo.Text);
             float Pantorrilla = (float)Convert.ToDouble(TbPantorrilla.Text);
-            float[] medidas = { Peso, Talla, Triceps, Biceps, Pecho, Axila, Subescapular, Suprailiaco, Abdomen, Muslo, Pantorrilla };
-
-            WcfService1.WebService API = new WcfService1.WebService();
-
+            ArrayOfFloat medidas = new ArrayOfFloat { Peso, Talla, Triceps, Biceps, Pecho, Axila, Subescapular, Suprailiaco, Abdomen, Muslo, Pantorrilla };          
+             GymAPI.WebServiceSoapClient API = new GymAPI.WebServiceSoapClient();
             API.Save(TbNombre.Text, medidas, Convert.ToInt16(TbEdad.Text), TbGen.Text[0], Convert.ToDateTime(TbDate.Text));
-
-
-
-
-
-
+            Response.Redirect("Data.aspx");
         }
-
-
     }
 }

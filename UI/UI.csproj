@@ -94,9 +94,7 @@
     <Content Include="CSS\Estilos.css" />
     <Content Include="Data.aspx" />
     <Content Include="Form.aspx" />
-    <Content Include="Images\gim.jpg" />
-    <Content Include="Images\n1.jpg" />
-    <Content Include="Images\nutri.jpg" />
+    <Content Include="Images\nutricion.jpg" />
     <Content Include="Principal.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

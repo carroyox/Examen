@@ -26,26 +26,27 @@ namespace BL
                 datos[0] = tabla.Nombre_Paciente;
                 datos[1] = tabla.Genero.ToString();
                 datos[2] = tabla.Edad.ToString();
-                datos[3] = tabla.Peso.ToString();
-                datos[4] = tabla.Talla.ToString();
-                datos[5] = tabla.Triceps.ToString();
-                datos[6] = tabla.Biceps.ToString();
-                datos[7] = tabla.Pecho.ToString();
-                datos[8] = tabla.Axila.ToString();
-                datos[9] = tabla.Subescapular.ToString();
-                datos[10] = tabla.Suprailíaco.ToString();
-                datos[11] = tabla.Abdomen.ToString();
-                datos[12] = tabla.Muslo.ToString();
-                datos[13] = tabla.Pantorrilla.ToString();
+                datos[3] = tabla.Peso.ToString("0.##Kg");
+                datos[4] = tabla.Talla.ToString("0.##mts");
+                datos[5] = tabla.Triceps.ToString("0.##mm");
+                datos[6] = tabla.Biceps.ToString("0.##mm");
+                datos[7] = tabla.Pecho.ToString("0.##mm");
+                datos[8] = tabla.Axila.ToString("0.##mm");
+                datos[9] = tabla.Subescapular.ToString("0.##mm");
+                datos[10] = tabla.Suprailíaco.ToString("0.##mm");
+                datos[11] = tabla.Abdomen.ToString("0.##mm");
+                datos[12] = tabla.Muslo.ToString("0.##mm");
+                datos[13] = tabla.Pantorrilla.ToString("0.##mm");
                 datos[14] = tabla.Fecha_Medicion.ToString();
-                datos[15] = tabla.Resultado_YUHASZ.ToString();
-                datos[16] = tabla.Resultado_JacksonPollock.ToString();
+                datos[15] = tabla.Resultado_YUHASZ.ToString("0.###");
+                datos[16] = tabla.Resultado_JacksonPollock.ToString("0.###");
                 retorno.Add(datos);
+             
             }
             return retorno;
 
         }
-
+        
         public void Save(string nombre, float[] medidas, int edad, char genero, DateTime fecha)
         {
             using (DB_ExamenEntities context = new DB_ExamenEntities())
